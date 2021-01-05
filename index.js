@@ -3,12 +3,12 @@ async function getRandomNumber() {
     setTimeout(() => resolve(Math.floor(Math.random() * 100)), 500);
   });
 
-  let result = await myPromise;
-  console.log(result);
+  return myPromise;
 }
 
 async function printNum() {
-  getRandomNumber();
+  let result = await getRandomNumber();
+  console.log(result);
 }
 
 printNum();
